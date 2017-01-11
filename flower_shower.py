@@ -1,7 +1,7 @@
-# The simplest script for detection soil moistures
+# The simplest script for watering a plants by soil moisture module and water pomp
 # Tuning YL-38 and connect DO to Raspberry Pi Model 3
 # Output is True or False for current moisture
-
+#
 # Author : Ilya Demidov
 # Distribution : Raspbian
 # Python : 3
