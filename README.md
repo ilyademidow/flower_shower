@@ -1,5 +1,6 @@
-How often you forgot water a home plants? I usually :) 
-And I try to resolve this problem. No, I won't create a remind! I created an <b>autowatering</b>!
+How often you forgot water a home plants? I usually :)
+
+And I tried to resolve this problem. No, I haven't been creating a reminds! I created an <b>autowatering</b>!
 
 It needs Raspberry Pi, soil moisture sensor module and water pomp
 
