@@ -13,6 +13,7 @@ from gpiozero import MotionSensor, OutputDevice
 config = configparser.ConfigParser()
 config.read("mode.py")
 debugMode = config.getboolean("Mode","debugMode")
+waterValue = config.getint("Water","waterValue")
 
 # MotionSensor class is useful for this target
 ms = MotionSensor(18)
@@ -21,14 +22,17 @@ waterPomp = OutputDevice(17)
 
 # Main program loop
 while True:
-  if ms.motion_detected:
-      if debugMode:
-        print("on")
-      else:
-        waterPomp.on()
-      time.sleep(3)
-  else:
-      if debugMode:
-        print("OFF")
-      else:
-        waterPomp.off()
+  try:
+    if ms.motion_detected:
+        if debugMode:
+          print("on")
+        else:
+          waterPomp.on()
+        time.sleep(waterValue)
+    else:
+        if debugMode:
+          print("OFF")
+        else:
+          waterPomp.off()
+  finally:
+      waterPomp.off()
